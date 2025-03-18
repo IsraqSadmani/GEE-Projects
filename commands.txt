@@ -1,0 +1,44 @@
+Creating a virtual conda environment named 'geo' in my pc with python version 3.11
+	(base) C:\Users\AGIS-ISRAQ>conda create -n geo python=3.11
+Activating the 'geo' conda virtual environment
+	(base) C:\Users\AGIS-ISRAQ>conda activate geo
+A virtual conda environment has been created. Now here we can install all the neccessary packages.
+	1. Mamba: conda install -n base mamba -c conda-forge
+	2.Inslall Geemap leafmap: >mamba install -c conda-forge geemap leafmap
+		This will install about 335 associated packages.
+	NOTE: Jupytar Lab has been installed by default.
+
+
+####We can install the necessary packages using either mamba or conda or pip install. But the preference is Mamba>Conda>Pip install. This is because, mamba is faster to resolve depencies of the packages than the Conda. Whereas Pip install is least prefered because this source is not as safe as mamba or conda.
+
+Jupyter Lab installation
+file:///C:/Users/AGIS-ISRAQ/AppData/Roaming/jupyter/runtime/jpserver-43096-open.html
+
+A virtual environment is created. Now I can use jupyter to work in my GEE project.
+Everytime, open Anaconda prompt
+1. And then type: conda env list >>>> to get the available virtual env in my machine
+2. Activate the desired env: conda activate 'env_name'
+3. And after activating the env type: jupyter notebook>>>> BOOOOM>>>>The jupyter notebook will open in the    browser.
+
+
+Collaborating Github: 
+Pushing new edits:
+git status (in the (gee) C:\Users\AGIS-ISRAQ\GEE>)>>>then>>>>git add test_geemap.ipynb>>>git add .>>>git commit -m "Updated test_geemap.ipynb with new changes">>>>git push origin main
+
+Clonning on other environment:
+Now, on another machine, you can clone the repository and set up the same environment:
+		git clone https://github.com/IsraqSadmani/GEE-Projects
+		cd GEE-Projects
+		conda env create -f environment.yml
+Then activate the environment and start Jupyter Notebook:
+		conda activate 'env_name'
+		jupyter notebook
+
+
+
+
+
+
+
+
+
